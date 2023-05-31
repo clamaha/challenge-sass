@@ -1,0 +1,16 @@
+$background-color: #fff;
+$main-color:#8C8C8C;
+$secondary-color: #000;
+$shadow-color: #6b717f;
+$heading-color : #BF4080;
+$first-back-color: #008000;
+$second-back-color: #ff0000;
+$third-back-color:#ffa500;
+
+$global-padding: 1em;
+
+@mixin box-color ($shadow-color){
+    -webkit-box-shadow: 10px 10px 15px -4px $shadow-color;
+    -moz-box-shadow: 10px 10px 15px -4px $shadow-color;
+    box-shadow: 10px 10px 15px -4px $shadow-color;
+}

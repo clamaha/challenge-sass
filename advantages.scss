@@ -1,0 +1,9 @@
+li.adv-item{
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i})
+        {
+            background-color:lighten($heading-color, $i *5% );
+            color: darken($shadow-color, $i*10%);
+        }
+    }
+}

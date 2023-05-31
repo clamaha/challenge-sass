@@ -1,0 +1,102 @@
+body {
+    font: 100% "Space Mono", monospace;
+    color: #6b717f;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 1em;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article section {
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px #8C8C8C solid;
+    -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+    -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+    box-shadow: 10px 10px 15px -4px #6b717f;
+    padding: 16px;
+    margin: 16px;
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+article section#selling-points {
+    flex-grow: 2;
+    flex-basis: 100%;
+}
+
+article code {
+    background: #000;
+    border: 1px solid #6b717f;
+    color: #8C8C8C;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+article code.before {
+    float: left;
+    width: 40%;
+}
+
+article code.after {
+    float: right;
+    width: 40%;
+}
+h1,
+h2,
+h3 {
+    color: #BF4080;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+}
+
+.messages {
+    padding: 16px;
+}
+
+.success,
+.error,
+.warning {
+    border: 1px solid #8C8C8C;
+    padding: 16px;
+    color: #fff;
+}
+
+.success {
+    background-color: #008000;
+}
+
+.error {
+    background-color: #ff0000;
+}
+
+.warning {
+    background-color: #ffa500;
+}

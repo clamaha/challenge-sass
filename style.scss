@@ -1,0 +1,102 @@
+@import "variables.scss";
+@import "advantages.scss";
+
+body {
+    font: 100% "Space Mono", monospace;
+    color: $shadow-color;
+    margin: 0;
+    padding: $global-padding;
+    background-color: $background-color;
+    overflow-x: hidden;
+}
+main {
+    padding: 0 $global-padding;
+}
+
+h1,
+h2,
+h3 {
+    color: $heading-color;
+}
+
+h1 {
+    text-align: center;
+}
+h3{
+    padding: $global-padding*2;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+
+    section {
+        @include box-color($shadow-color);
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $main-color solid;
+        padding: $global-padding;
+        margin: $global-padding;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+
+            #selling-points{
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+    }
+
+        code {
+        background: $secondary-color;
+        border: 1px solid $shadow-color;
+        color: $main-color;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    
+            code.before {
+                float: left;
+                width: 40%;
+            }
+
+            code.after {
+            float: right;
+            width: 40%;
+            }
+    }
+}
+
+.messages{
+        border: 1px solid $main-color;
+        padding: $global-padding;
+        color: $background-color;
+    
+}
+    .success {
+        @extend.messages;
+        background-color: $first-back-color;
+    }
+
+    .error {
+        @extend.messages;
+        background-color: $second-back-color;
+
+    &:hover {
+        background-color: $first-back-color;
+        }
+    }
+
+    .warning {
+        @extend.messages;
+        background-color: $third-back-color;
+    }
